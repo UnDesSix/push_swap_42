@@ -35,8 +35,7 @@ init			:
 
 $(NAME)			:	$(OBJ) $(INC)
 					@ echo "$(_INFO) Initialize $(NAME)"
-#				 	@ $(CC) $(CFLAGS) -o $(NAME) $(OBJ) $(LIB_FLAG)
-				 	@ $(CC) $(CFLAGS) -o $(NAME) $(OBJ)
+				 	@ $(CC) $(CFLAGS) -o $(NAME) $(OBJ) $(LIB_FLAG)
 
 $(OBJ_DIR)/%.o	:	%.c
 					@ echo "\t$(_YELLOW)Compiling$(_RESET) $*.c\r\c"
