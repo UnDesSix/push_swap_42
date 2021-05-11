@@ -5,7 +5,14 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include <../../libft/libft.h>
+# include "get_next_line.h"
+# define TRUE 1
+# define FALSE 0
+
+typedef int	t_bool;
 
 int		ft_atoi_spe(const char *str, int *result);
 int		parse_arg(char *arg, int **final_list);
+t_bool	unique_values(int *list, int list_nbr);
+
 #endif
