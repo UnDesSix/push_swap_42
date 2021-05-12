@@ -6,7 +6,7 @@
 /*   By: mlarboul <mlarboul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/12 06:58:44 by mlarboul          #+#    #+#             */
-/*   Updated: 2021/05/12 07:09:29 by mlarboul         ###   ########.fr       */
+/*   Updated: 2021/05/12 07:17:40 by mlarboul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,8 @@ int		main(int argc, char **argv)
 
 	success = TRUE;
 	final_list = NULL;
+
+	// CHECKING ERRORS
 	if (argc != 2)
 		return (ft_error(0, final_list));
 	list_nbr = parse_arg(argv[1], &final_list);
@@ -41,8 +43,12 @@ int		main(int argc, char **argv)
 		return (ft_error(1, final_list));
 	if (unique_values(final_list, list_nbr) == FALSE)
 		return (ft_error(2, final_list));
+
+	// PRINTING VALUES IF NO MISTAKE (aka : valid arg, unique values, integers only)
 	for (int i = 0; i < list_nbr; i++)
 		printf("value %3d : %3d\n", i, final_list[i]);
+
+	// READING OPERATIONS
 	while (get_next_line(0, &line) != 0)
 	{
 		if (operation_is_valid(line) == FALSE)
@@ -54,6 +60,8 @@ int		main(int argc, char **argv)
 			printf("TRUE\n");
 		free(line);
 	}
+
+	// ONLY WHEN ITS DONE
 	free(final_list);
 	return (0);
 }
