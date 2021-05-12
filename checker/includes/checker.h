@@ -6,7 +6,7 @@
 /*   By: mlarboul <mlarboul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/12 06:58:32 by mlarboul          #+#    #+#             */
-/*   Updated: 2021/05/12 07:10:06 by mlarboul         ###   ########.fr       */
+/*   Updated: 2021/05/12 07:27:32 by mlarboul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,5 +27,6 @@ int		ft_atoi_spe(const char *str, int *result);
 int		parse_arg(char *arg, int **final_list);
 t_bool	unique_values(int *list, int list_nbr);
 t_bool	operation_is_valid(char *ope);
+t_bool	list_is_sorted(int *list, int list_nbr);
 
 #endif

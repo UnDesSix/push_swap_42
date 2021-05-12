@@ -6,7 +6,7 @@
 /*   By: mlarboul <mlarboul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/12 06:58:44 by mlarboul          #+#    #+#             */
-/*   Updated: 2021/05/12 07:17:40 by mlarboul         ###   ########.fr       */
+/*   Updated: 2021/05/12 07:29:25 by mlarboul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,6 +60,13 @@ int		main(int argc, char **argv)
 			printf("TRUE\n");
 		free(line);
 	}
+
+	// CHECKING IF THE LIST IS SORTED
+	if (list_is_sorted(final_list, list_nbr) == TRUE)
+		printf("YEAAAAH Your list is well sorted!\n");
+	else 
+		printf("BOOOOOH Your list is not sorted...\n");
+
 
 	// ONLY WHEN ITS DONE
 	free(final_list);
