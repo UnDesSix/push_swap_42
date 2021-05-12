@@ -6,7 +6,7 @@
 /*   By: mlarboul <mlarboul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/12 06:58:44 by mlarboul          #+#    #+#             */
-/*   Updated: 2021/05/12 08:40:18 by mlarboul         ###   ########.fr       */
+/*   Updated: 2021/05/12 10:30:10 by mlarboul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,21 @@ int		ft_error(int code, int *final_list)
 		free(final_list);
 	return (0);
 }
+
+void	print_stacks(t_stack stack_a, t_stack stack_b)
+{
+	printf("STACK_A :\n");
+	if (stack_a.cur_size == 0)
+		printf("[EMPTY]\n");
+	for (int i = 0; i < stack_a.cur_size; i++)
+		printf("[%3d]: %3d\n", i, stack_a.tab[i]);
+	printf("\nSTACK_B :\n");
+	if (stack_b.cur_size == 0)
+		printf("[EMPTY]\n");
+	for (int i = 0; i < stack_b.cur_size; i++)
+		printf("[%3d]: %3d\n", i, stack_b.tab[i]);
+}
+
 
 int		main(int argc, char **argv)
 {
@@ -52,23 +67,24 @@ int		main(int argc, char **argv)
 		printf("value %3d : %3d\n", i, final_list[i]);
 	*/
 
+
 	// CREATING AND PRINTING STACKS
 	create_stack_a(&stack_a, final_list, list_size);
 	create_stack_b(&stack_b, list_size);	
-	printf("STACK_A :\n");
-	if (stack_a.cur_size == 0)
-		printf("[EMPTY]\n");
-	for (int i = 0; i < stack_a.cur_size; i++)
-		printf("[%3d]: %3d\n", i, stack_a.tab[i]);
-	printf("\nSTACK_B :\n");
-	if (stack_b.cur_size == 0)
-		printf("[EMPTY]\n");
-	for (int i = 0; i < stack_b.cur_size; i++)
-		printf("[%3d]: %3d\n", i, stack_b.tab[i]);
-
+	print_stacks(stack_a, stack_b);
+	
+	//MAKING SOME OPERATIONS
+	simple_reverse(&stack_a);
+	simple_reverse(&stack_a);
+	simple_reverse(&stack_a);
+	simple_reverse(&stack_a);
+	print_stacks(stack_a, stack_b);
+	
 	// ONLY WHEN STACKS ARE FILLED
 	free(final_list);
 
+	(void)line;
+	/*
 	// READING OPERATIONS
 	while (get_next_line(0, &line) != 0)
 	{
@@ -84,13 +100,14 @@ int		main(int argc, char **argv)
 	}
 	if (line != NULL)
 		free(line);
+	*/
 
 
 	// CHECKING IF THE LIST IS SORTED
 	if (list_is_sorted(stack_a.tab, stack_a.cur_size) == TRUE)
-		printf("YEAAAAH Your list is well sorted!\n");
+		printf("\nYEAAAAH Your list is well sorted!\n");
 	else 
-		printf("BOOOOOH Your list is not sorted...\n");
+		printf("\nBOOOOOH Your list is not sorted...\n");
 
 	// FREE STACKS
 	free(stack_a.tab);
