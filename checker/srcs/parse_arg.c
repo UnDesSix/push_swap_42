@@ -6,7 +6,7 @@
 /*   By: mlarboul <mlarboul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/06 16:43:12 by mlarboul          #+#    #+#             */
-/*   Updated: 2021/05/11 16:45:15 by mlarboul         ###   ########.fr       */
+/*   Updated: 2021/05/12 08:11:56 by mlarboul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,16 +57,16 @@ int		parse_arg(char *arg, int **final_list)
 **	If so it returns TRUE, else it returns FALSE
 */
 
-t_bool	unique_values(int *list, int list_nbr)
+t_bool	unique_values(int *list, int list_size)
 {
 	int	i;
 	int	j;
 
 	i = 0;
-	while (i < list_nbr)
+	while (i < list_size)
 	{
 		j = i + 1;
-		while (j < list_nbr)
+		while (j < list_size)
 		{
 			if (list[i] == list[j])
 				return (FALSE);
