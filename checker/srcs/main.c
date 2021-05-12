@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mlarboul <mlarboul@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/05/12 06:58:44 by mlarboul          #+#    #+#             */
+/*   Updated: 2021/05/12 07:09:29 by mlarboul         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../includes/checker.h"
 
 int		ft_error(int code, int *final_list)
@@ -15,11 +27,12 @@ int		ft_error(int code, int *final_list)
 
 int		main(int argc, char **argv)
 {
+	int		success;
 	int		*final_list;
 	int		list_nbr;
 	char	*line;
 
-
+	success = TRUE;
 	final_list = NULL;
 	if (argc != 2)
 		return (ft_error(0, final_list));
@@ -32,7 +45,13 @@ int		main(int argc, char **argv)
 		printf("value %3d : %3d\n", i, final_list[i]);
 	while (get_next_line(0, &line) != 0)
 	{
-		check_ope_name(line);
+		if (operation_is_valid(line) == FALSE)
+		{
+			success = FALSE;
+			printf("FALSE\n");
+		}
+		else
+			printf("TRUE\n");
 		free(line);
 	}
 	free(final_list);
