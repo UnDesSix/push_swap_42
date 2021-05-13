@@ -6,7 +6,7 @@
 /*   By: mlarboul <mlarboul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/12 06:58:44 by mlarboul          #+#    #+#             */
-/*   Updated: 2021/05/12 10:30:10 by mlarboul         ###   ########.fr       */
+/*   Updated: 2021/05/12 17:15:42 by mlarboul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,45 +73,39 @@ int		main(int argc, char **argv)
 	create_stack_b(&stack_b, list_size);	
 	print_stacks(stack_a, stack_b);
 	
-	//MAKING SOME OPERATIONS
-	simple_reverse(&stack_a);
-	simple_reverse(&stack_a);
-	simple_reverse(&stack_a);
-	simple_reverse(&stack_a);
-	print_stacks(stack_a, stack_b);
-	
 	// ONLY WHEN STACKS ARE FILLED
 	free(final_list);
 
-	(void)line;
-	/*
 	// READING OPERATIONS
-	while (get_next_line(0, &line) != 0)
+	while (get_next_line(0, &line) != 0 && success == TRUE)
 	{
-		if (operation_is_valid(line) == FALSE)
-		{
-			success = FALSE;
-			printf("FALSE\n");
-		}
-		else
-			printf("TRUE\n");
+//		if (operation_is_valid(line) == FALSE)
+//			success = FALSE;
+//		else
+			exec_operation(&stack_a, &stack_b, line);
 		if (line != NULL)
 			free(line);
 	}
 	if (line != NULL)
 		free(line);
-	*/
-
-
+	if (success == FALSE)
+	{
+		printf("Wrong operations\n");
+		free(stack_a.tab);
+		free(stack_b.tab);
+		return (0);
+	}
+	
 	// CHECKING IF THE LIST IS SORTED
-	if (list_is_sorted(stack_a.tab, stack_a.cur_size) == TRUE)
+	print_stacks(stack_a, stack_b);
+	if (list_is_sorted(stack_a) == TRUE)
 		printf("\nYEAAAAH Your list is well sorted!\n");
 	else 
 		printf("\nBOOOOOH Your list is not sorted...\n");
 
 	// FREE STACKS
+
 	free(stack_a.tab);
 	free(stack_b.tab);
-
 	return (0);
 }
