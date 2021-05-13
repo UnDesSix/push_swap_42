@@ -6,15 +6,15 @@
 /*   By: mlarboul <mlarboul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/12 08:55:44 by mlarboul          #+#    #+#             */
-/*   Updated: 2021/05/12 10:35:39 by mlarboul         ###   ########.fr       */
+/*   Updated: 2021/05/13 08:56:21 by mlarboul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/checker.h"
 
 /*
-**	This function will do "pa" or "pb". If one of the arguments is null or 
-**	that the tab of one the stak is null, it returns -1. 
+**	This function will do "pa" or "pb". If one of the arguments is null or
+**	that the tab of one the stak is null, it returns -1.
 **	Otherwise it operate the push and return 0.
 */
 

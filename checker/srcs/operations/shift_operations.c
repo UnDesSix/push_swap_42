@@ -6,7 +6,7 @@
 /*   By: mlarboul <mlarboul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/12 09:01:00 by mlarboul          #+#    #+#             */
-/*   Updated: 2021/05/12 14:39:16 by mlarboul         ###   ########.fr       */
+/*   Updated: 2021/05/13 08:56:45 by mlarboul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ int		single_rotate(t_stack *stack)
 	if (stack->cur_size == 0 || stack->cur_size == 1)
 		return (0);
 	i = 0;
-	tmp_value = stack->tab[i]; 
+	tmp_value = stack->tab[i];
 	while (i < stack->cur_size - 1)
 	{
 		stack->tab[i] = stack->tab[i + 1];
@@ -54,7 +54,7 @@ int		single_reverse(t_stack *stack)
 	if (stack->cur_size == 0 || stack->cur_size == 1)
 		return (0);
 	i = stack->cur_size - 1;
-	tmp_value = stack->tab[i]; 
+	tmp_value = stack->tab[i];
 	while (i > 0)
 	{
 		stack->tab[i] = stack->tab[i - 1];
