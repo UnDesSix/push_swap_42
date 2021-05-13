@@ -6,7 +6,7 @@
 /*   By: mlarboul <mlarboul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/12 09:01:00 by mlarboul          #+#    #+#             */
-/*   Updated: 2021/05/12 10:37:58 by mlarboul         ###   ########.fr       */
+/*   Updated: 2021/05/12 14:39:16 by mlarboul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 **	Otherwise it operate the rotate and returns 0.
 */
 
-int		simple_rotate(t_stack *stack)
+int		single_rotate(t_stack *stack)
 {
 	int	i;
 	int	tmp_value;
@@ -44,7 +44,7 @@ int		simple_rotate(t_stack *stack)
 **	Otherwise it operate the rotate and returns 0.
 */
 
-int		simple_reverse(t_stack *stack)
+int		single_reverse(t_stack *stack)
 {
 	int	i;
 	int	tmp_value;
@@ -70,9 +70,9 @@ int		simple_reverse(t_stack *stack)
 
 int		double_rotate(t_stack *stack_a, t_stack *stack_b)
 {
-	if (simple_rotate(stack_a) < 0)
+	if (single_rotate(stack_a) < 0)
 		return (-1);
-	if (simple_rotate(stack_b) < 0)
+	if (single_rotate(stack_b) < 0)
 		return (-1);
 	return (0);
 }
@@ -83,9 +83,9 @@ int		double_rotate(t_stack *stack_a, t_stack *stack_b)
 
 int		double_reverse(t_stack *stack_a, t_stack *stack_b)
 {
-	if (simple_reverse(stack_a) < 0)
+	if (single_reverse(stack_a) < 0)
 		return (-1);
-	if (simple_reverse(stack_b) < 0)
+	if (single_reverse(stack_b) < 0)
 		return (-1);
 	return (0);
 }
