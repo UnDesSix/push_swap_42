@@ -1,7 +1,5 @@
-_BOLDMAGENTA=	\033[1;94m
-_YELLOW		=	\033[38;5;184m
-_GREEN		=	\033[38;5;46m
-_RESET		=	\033[0m
+_BOLDMAGENTA	=	\033[1;94m
+_RESET			=	\033[0m
 
 all:
 		@ echo "$(_BOLDMAGENTA)LIBTF : $(_RESET)"
