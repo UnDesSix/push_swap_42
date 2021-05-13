@@ -6,7 +6,7 @@
 /*   By: mlarboul <mlarboul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/12 18:30:23 by mlarboul          #+#    #+#             */
-/*   Updated: 2021/05/11 17:52:36 by mlarboul         ###   ########.fr       */
+/*   Updated: 2021/05/13 09:08:10 by mlarboul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,7 @@
 # include <unistd.h>
 # include <stdlib.h>
 
-#  define BUFFER_SIZE 1024
-
+# define BUFFER_SIZE 1024
 
 typedef	unsigned int	t_size;
 

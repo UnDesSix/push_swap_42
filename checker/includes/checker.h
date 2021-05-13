@@ -6,7 +6,7 @@
 /*   By: mlarboul <mlarboul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/12 06:58:32 by mlarboul          #+#    #+#             */
-/*   Updated: 2021/05/13 07:45:38 by mlarboul         ###   ########.fr       */
+/*   Updated: 2021/05/13 09:07:43 by mlarboul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,6 @@
 # include "get_next_line.h"
 # define TRUE 1
 # define FALSE 0
-# define SHIFT_UP  1
-# define SHIFT_DOWN 0exec_operation(t_stack *stack_a, t_stack *stack_b, char *ope)
-
 
 typedef int		t_bool;
 
