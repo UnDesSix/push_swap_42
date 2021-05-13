@@ -6,7 +6,7 @@
 /*   By: mlarboul <mlarboul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/13 08:53:39 by mlarboul          #+#    #+#             */
-/*   Updated: 2021/05/13 08:55:20 by mlarboul         ###   ########.fr       */
+/*   Updated: 2021/05/13 09:02:52 by mlarboul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@
 
 int		ft_error(int *list)
 {
-	write(1, "KO\n", 3);
+	write(1, "Error\n", 6);
 	if (list != NULL)
 		free(list);
 	return (0);
@@ -63,7 +63,7 @@ int		read_operations(t_stack *stack_a, t_stack *stack_b)
 		free(line);
 	if (success == FALSE)
 	{
-		write(1, "KO\n", 3);
+		write(1, "Error\n", 6);
 		free(stack_a->tab);
 		free(stack_b->tab);
 		return (-1);
@@ -78,6 +78,8 @@ int		main(int argc, char **argv)
 	t_stack	stack_a;
 	t_stack	stack_b;
 
+	if (argc < 2)
+		return (0);
 	list_size = argc - 1;
 	list = parse_arg(list_size, argv);
 	if (!list || unique_values(list, list_size) == FALSE)
