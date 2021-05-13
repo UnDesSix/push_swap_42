@@ -6,7 +6,7 @@
 /*   By: mlarboul <mlarboul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/12 06:58:32 by mlarboul          #+#    #+#             */
-/*   Updated: 2021/05/12 17:16:04 by mlarboul         ###   ########.fr       */
+/*   Updated: 2021/05/13 07:45:38 by mlarboul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ typedef struct	s_stack
 }				t_stack;
 
 int				ft_atoi_spe(const char *str, int *result);
-int				parse_arg(char *arg, int **final_list);
+int				*parse_arg(int list_size, char **argv);
 t_bool			unique_values(int *list, int list_size);
 t_bool			operation_is_valid(char *ope);
 t_bool			list_is_sorted(t_stack stack_a);

@@ -6,7 +6,7 @@
 /*   By: mlarboul <mlarboul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/06 16:43:12 by mlarboul          #+#    #+#             */
-/*   Updated: 2021/05/12 08:11:56 by mlarboul         ###   ########.fr       */
+/*   Updated: 2021/05/13 07:49:36 by mlarboul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,32 +24,32 @@ int		free_tmp_list(char **tmp_list, int err_code)
 }
 
 /*
-**	This function returns the size of the list or negative value if something
-**	went wrong. First argument is the concatenated list, and the second arg
-**	is the adress of the final list made of int value.
+**	This function returns the list malloc'd or NULL pointers if something
+**	went wrong. First argument is the size of the list, and the second arg
+**	is the adress of the tab containing all arguments.
 */
 
-int		parse_arg(char *arg, int **final_list)
+int		*parse_arg(int list_size, char **argv)
 {
-	char	**tmp_list;
-	int		i;
-	int		r_value;
+	int	i;
+	int	*list;
 
-	tmp_list = NULL;
+	if (list_size < 1)
+		return (NULL);
 	i = 0;
-	r_value = 0;
-	tmp_list = ft_split(arg, ' ');
-	while (tmp_list[i])
+	list = malloc(sizeof(int) * (list_size));
+	if (list == NULL)
+		return (NULL);
+	while (i < list_size)
+	{
+		if (ft_atoi_spe(argv[i + 1], &list[i]) < 0)
+		{
+			printf("ERROR\n");
+			return (NULL);
+		}
 		i++;
-	*final_list = malloc(sizeof(int) * i);
-	if (*final_list == NULL)
-		return (free_tmp_list(tmp_list, -2));
-	i = -1;
-	while (tmp_list[++i])
-		if (ft_atoi_spe(tmp_list[i], &((*final_list)[i])) < 0)
-			return (free_tmp_list(tmp_list, -1));
-	free_tmp_list(tmp_list, 0);
-	return (i);
+	}
+	return (list);
 }
 
 /*
