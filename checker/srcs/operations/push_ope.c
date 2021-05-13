@@ -6,7 +6,7 @@
 /*   By: mlarboul <mlarboul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/12 08:55:44 by mlarboul          #+#    #+#             */
-/*   Updated: 2021/05/13 08:56:21 by mlarboul         ###   ########.fr       */
+/*   Updated: 2021/05/13 09:04:32 by mlarboul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,4 +46,3 @@ int		push_ope(t_stack *src, t_stack *dst)
 	}
 	return (0);
 }
-
