@@ -6,7 +6,7 @@
 /*   By: mlarboul <mlarboul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/06 16:43:12 by mlarboul          #+#    #+#             */
-/*   Updated: 2021/05/13 07:49:36 by mlarboul         ###   ########.fr       */
+/*   Updated: 2021/05/13 07:58:22 by mlarboul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,10 +43,7 @@ int		*parse_arg(int list_size, char **argv)
 	while (i < list_size)
 	{
 		if (ft_atoi_spe(argv[i + 1], &list[i]) < 0)
-		{
-			printf("ERROR\n");
 			return (NULL);
-		}
 		i++;
 	}
 	return (list);
