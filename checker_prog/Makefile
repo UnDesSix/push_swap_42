@@ -52,10 +52,4 @@ fclean			:	clean
 
 re				: 	fclean all
 
-bonus			:	all
-
-norminette		:
-					@ ~/.norminette/norminette.rb $(SRC_DIR)
-					@ ~/.norminette/norminette.rb $(INC_DIR)
-
 .PHONY: 		all fclean clean re

@@ -6,18 +6,18 @@
 /*   By: mlarboul <mlarboul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/12 06:58:32 by mlarboul          #+#    #+#             */
-/*   Updated: 2021/05/13 09:07:43 by mlarboul         ###   ########.fr       */
+/*   Updated: 2021/05/13 12:50:18 by mlarboul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef CHECKER_H
 # define CHECKER_H
 
-# include <stdio.h>
 # include <stdlib.h>
 # include <unistd.h>
 # include <../../libft/libft.h>
 # include "get_next_line.h"
+
 # define TRUE 1
 # define FALSE 0
 
