@@ -6,7 +6,7 @@
 /*   By: mlarboul <mlarboul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/12 09:01:00 by mlarboul          #+#    #+#             */
-/*   Updated: 2021/05/15 08:36:54 by mlarboul         ###   ########.fr       */
+/*   Updated: 2021/05/15 11:28:45 by mlarboul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ int		ft_rra(t_stack *stack)
 	}
 	stack->tab[i] = tmp_value;
 	write(1, "rra\n", 4);
+	ope_nb++;
 	return (0);
 }
 
@@ -51,6 +52,7 @@ int		ft_rrb(t_stack *stack)
 	}
 	stack->tab[i] = tmp_value;
 	write(1, "rrb\n", 4);
+	ope_nb++;
 	return (0);
 }
 
@@ -61,5 +63,6 @@ int		ft_rrr(t_stack *stack_a, t_stack *stack_b)
 	if (ft_rrb(stack_b) < 0)
 		return (-1);
 	write(1, "rrr\n", 4);
+	ope_nb++;
 	return (0);
 }

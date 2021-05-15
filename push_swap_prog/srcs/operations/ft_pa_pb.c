@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_ope.c                                         :+:      :+:    :+:   */
+/*   ft_pa_pb.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mlarboul <mlarboul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/12 08:55:44 by mlarboul          #+#    #+#             */
-/*   Updated: 2021/05/15 08:31:16 by mlarboul         ###   ########.fr       */
+/*   Updated: 2021/05/15 14:49:07 by mlarboul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 **	Otherwise it operate the push and return 0.
 */
 
-int		ft_pa(t_stack *src, t_stack *dst)
+int	ft_pa(t_stack *src, t_stack *dst)
 {
 	int	i;
 
@@ -42,10 +42,11 @@ int		ft_pa(t_stack *src, t_stack *dst)
 	while (++i < src->cur_size)
 		src->tab[i] = src->tab[i + 1];
 	write(1, "pa\n", 3);
+	ope_nb++;
 	return (0);
 }
 
-int		ft_pb(t_stack *src, t_stack *dst)
+int	ft_pb(t_stack *src, t_stack *dst)
 {
 	int	i;
 
@@ -69,5 +70,6 @@ int		ft_pb(t_stack *src, t_stack *dst)
 	while (++i < src->cur_size)
 		src->tab[i] = src->tab[i + 1];
 	write(1, "pb\n", 3);
+	ope_nb++;
 	return (0);
 }
