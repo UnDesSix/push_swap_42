@@ -6,42 +6,37 @@
 /*   By: mlarboul <mlarboul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/15 07:04:14 by mlarboul          #+#    #+#             */
-/*   Updated: 2021/05/15 08:41:12 by mlarboul         ###   ########.fr       */
+/*   Updated: 2021/05/15 14:48:44 by mlarboul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/push_swap.h"
 
-int	bubble_sort(t_stack *stack_init)
+int	get_min_max_med(t_stack *stack)
 {
-	int	i;
-	int	j;
-	int tmp;
+	t_stack	tmp_stack;
+	int		i;
+	int		j;
+	int		tmp_value;
 
-	i = 0;
-	while (i < stack_init->max_size)
+	if (stack_cpy(stack, &tmp_stack) < 0)
+		return (-1);
+	i = -1;
+	while (++i < tmp_stack.max_size)
 	{
-		j = i + 1;
-		while (j < stack_init->max_size)
-		{
-			if (stack_init->tab[i] > stack_init->tab[j])
+		j = i;
+		while (++j < tmp_stack.max_size)
+			if (tmp_stack.tab[i] > tmp_stack.tab[j])
 			{
-				tmp = stack_init->tab[i];
-				stack_init->tab[i] = stack_init->tab[j];
-				stack_init->tab[j] = tmp;
+				tmp_value = tmp_stack.tab[i];
+				tmp_stack.tab[i] = tmp_stack.tab[j];
+				tmp_stack.tab[j] = tmp_value;
 			}
-			j++;
-		}
-		i++;
 	}
-	return (0);
-}
-
-int	get_min_max_med(t_stack *stack_init)
-{
-	bubble_sort(stack_init);
-	stack_init->info.min = stack_init->tab[0];
-	stack_init->info.max = stack_init->tab[stack_init->max_size - 1];
-	stack_init->info.med = stack_init->tab[(stack_init->max_size) / 2];
+	stack->info.min = tmp_stack.tab[0];
+	stack->info.max = tmp_stack.tab[tmp_stack.max_size - 1];
+	stack->info.med = tmp_stack.tab[(tmp_stack.max_size) / 2];
+	if (tmp_stack.tab != NULL)
+		free(tmp_stack.tab);
 	return (0);
 }
