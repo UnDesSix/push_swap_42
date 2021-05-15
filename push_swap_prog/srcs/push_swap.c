@@ -6,13 +6,38 @@
 /*   By: mlarboul <mlarboul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/13 12:56:09 by mlarboul          #+#    #+#             */
-/*   Updated: 2021/05/13 13:20:36 by mlarboul         ###   ########.fr       */
+/*   Updated: 2021/05/15 09:07:35 by mlarboul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdio.h>
+
 #include "../includes/push_swap.h"
 
-int		ft_error(int *list)
+void	print_stacks(t_stack stack_a, t_stack stack_b)
+{
+	printf("STACK_A :\n");
+	if (stack_a.cur_size == 0)
+		printf("[EMPTY]\n");
+	for (int i = 0; i < stack_a.cur_size; i++)
+		printf("[%3d]: %3d\n", i, stack_a.tab[i]);
+	printf("\nSTACK_B :\n");
+	if (stack_b.cur_size == 0)
+		printf("[EMPTY]\n");
+	for (int i = 0; i < stack_b.cur_size; i++)
+		printf("[%3d]: %3d\n", i, stack_b.tab[i]);
+}
+
+int	ft_free_stacks(t_stack stack_a, t_stack stack_b, t_stack stack_init)
+{
+	if (stack_a.tab != NULL)
+		free(stack_a.tab);
+	if (stack_b.tab != NULL)
+		free(stack_b.tab);
+	if (stack_init.tab != NULL)
+		free(stack_init.tab);
+	return (0);
+}
+
+int	ft_error(int *list)
 {
 	write(1, "Error\n", 6);
 	if (list != NULL)
@@ -20,32 +45,40 @@ int		ft_error(int *list)
 	return (-1);
 }
 
-int	check_args(int argc, char **argv, t_stack *stack_a, t_stack *stack_b)
+int	check_args(char **argv, t_stack *stack_init,
+				t_stack *stack_a, t_stack *stack_b)
 {
-	int		*list;
 	int		list_size;
 
-	if (argc < 2)
+	if (stack_init->max_size < 1)
 		return (-1);
-	list_size = argc - 1;
-	list = parse_arg(list_size, argv);
-	if (!list || unique_values(list, list_size) == FALSE)
-		return (ft_error(list));
-	if (create_stack_a(stack_a, list, list_size) < 0
+	list_size = stack_init->max_size;
+	stack_init->tab = parse_arg(list_size, argv);
+	if (!stack_init->tab || unique_values(stack_init->tab, list_size) == FALSE)
+		return (ft_error(stack_init->tab));
+	if (create_stack_a(stack_a, stack_init->tab, list_size) < 0
 			|| create_stack_b(stack_b, list_size) < 0)
-		return (ft_error(list));
-	if (list != NULL)
-		free(list);
+		return (ft_error(stack_init->tab));
 	return (0);
 }
 
-int		main(int argc, char **argv)
+int	main(int argc, char **argv)
 {
+	t_stack stack_init;
 	t_stack	stack_a;
 	t_stack	stack_b;
 
-	if (check_args(argc, argv, &stack_a, &stack_b) < 0)
+	stack_init.max_size = argc - 1;
+	if (check_args(argv, &stack_init, &stack_a, &stack_b) < 0)
 		return (0);
 	printf("list is ok\n");
+	get_min_max_med(&stack_init);
+//	printf("min = %d\n", stack_init.info.min);
+//	printf("max = %d\n", stack_init.info.max);
+//	printf("med = %d\n", stack_init.info.med);
+	if (stack_init.max_size == 3)
+		sort_three(&stack_init, &stack_a);
+	print_stacks(stack_a, stack_b);
+	ft_free_stacks(stack_a, stack_b, stack_init);
 	return (0);
 }
