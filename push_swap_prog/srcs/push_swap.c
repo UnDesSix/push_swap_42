@@ -6,14 +6,17 @@
 /*   By: mlarboul <mlarboul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/13 12:56:09 by mlarboul          #+#    #+#             */
-/*   Updated: 2021/05/15 09:07:35 by mlarboul         ###   ########.fr       */
+/*   Updated: 2021/05/15 14:38:39 by mlarboul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
+int		ope_nb = 0;
+
 void	print_stacks(t_stack stack_a, t_stack stack_b)
 {
+	printf("\n----------------\n\n");
 	printf("STACK_A :\n");
 	if (stack_a.cur_size == 0)
 		printf("[EMPTY]\n");
@@ -71,14 +74,19 @@ int	main(int argc, char **argv)
 	stack_init.max_size = argc - 1;
 	if (check_args(argv, &stack_init, &stack_a, &stack_b) < 0)
 		return (0);
-	printf("list is ok\n");
-	get_min_max_med(&stack_init);
-//	printf("min = %d\n", stack_init.info.min);
-//	printf("max = %d\n", stack_init.info.max);
-//	printf("med = %d\n", stack_init.info.med);
-	if (stack_init.max_size == 3)
-		sort_three(&stack_init, &stack_a);
-	print_stacks(stack_a, stack_b);
+//	get_min_max_med(&stack_init);
+	if (list_is_sorted(stack_a) == TRUE && list_is_complete(stack_a))
+		;
+	else if (stack_init.max_size <= 3)
+		sort_three(&stack_a);
+	else if (stack_init.max_size <= 5)
+		sort_five(&stack_a, &stack_b);
+//	print_stacks(stack_a, stack_b);
+	printf("%d\n", ope_nb);
+	if (list_is_sorted(stack_a) == TRUE && list_is_complete(stack_a))
+		printf("OK\n");
+	else
+		printf("KO\n");
 	ft_free_stacks(stack_a, stack_b, stack_init);
 	return (0);
 }
