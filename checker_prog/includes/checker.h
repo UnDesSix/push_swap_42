@@ -6,7 +6,7 @@
 /*   By: mlarboul <mlarboul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/12 06:58:32 by mlarboul          #+#    #+#             */
-/*   Updated: 2021/05/13 12:50:18 by mlarboul         ###   ########.fr       */
+/*   Updated: 2021/05/16 10:17:28 by mlarboul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 # include <stdlib.h>
 # include <unistd.h>
-# include <../../libft/libft.h>
+# include "../../libft/libft.h"
 # include "get_next_line.h"
 
 # define TRUE 1
