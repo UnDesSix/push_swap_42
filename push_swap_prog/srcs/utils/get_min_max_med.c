@@ -6,11 +6,34 @@
 /*   By: mlarboul <mlarboul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/15 07:04:14 by mlarboul          #+#    #+#             */
-/*   Updated: 2021/05/15 14:48:44 by mlarboul         ###   ########.fr       */
+/*   Updated: 2021/05/16 08:20:46 by mlarboul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/push_swap.h"
+
+int	bubble_sort(t_stack *stack)
+{
+	int		i;
+	int		j;
+	int		tmp_value;
+	t_stack	tmp_stack;
+
+	tmp_stack = *stack;
+	i = -1;
+	while (++i < tmp_stack.max_size)
+	{
+		j = i;
+		while (++j < tmp_stack.max_size)
+			if (tmp_stack.tab[i] > tmp_stack.tab[j])
+			{
+				tmp_value = tmp_stack.tab[i];
+				tmp_stack.tab[i] = tmp_stack.tab[j];
+				tmp_stack.tab[j] = tmp_value;
+			}
+	}
+	return (0);
+}
 
 int	get_min_max_med(t_stack *stack)
 {
