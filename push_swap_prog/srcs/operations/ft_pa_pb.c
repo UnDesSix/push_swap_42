@@ -6,7 +6,7 @@
 /*   By: mlarboul <mlarboul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/12 08:55:44 by mlarboul          #+#    #+#             */
-/*   Updated: 2021/05/15 14:49:07 by mlarboul         ###   ########.fr       */
+/*   Updated: 2021/05/16 12:51:55 by mlarboul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,8 @@ int	ft_pa(t_stack *src, t_stack *dst)
 	i = -1;
 	while (++i < src->cur_size)
 		src->tab[i] = src->tab[i + 1];
-	write(1, "pa\n", 3);
+//	write(1, "pa\n", 3);
+	printf("pa\n");
 	ope_nb++;
 	return (0);
 }
@@ -69,7 +70,8 @@ int	ft_pb(t_stack *src, t_stack *dst)
 	i = -1;
 	while (++i < src->cur_size)
 		src->tab[i] = src->tab[i + 1];
-	write(1, "pb\n", 3);
+//	write(1, "pb\n", 3);
+	printf("pb\n");
 	ope_nb++;
 	return (0);
 }
