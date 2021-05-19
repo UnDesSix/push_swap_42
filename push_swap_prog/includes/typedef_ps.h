@@ -6,7 +6,7 @@
 /*   By: mlarboul <mlarboul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/16 10:18:26 by mlarboul          #+#    #+#             */
-/*   Updated: 2021/05/16 10:19:38 by mlarboul         ###   ########.fr       */
+/*   Updated: 2021/05/19 07:06:23 by mlarboul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,7 @@ typedef struct	s_chunk
 {
 	int	min_val;
 	int max_val;
+	int med_val;
 	int size;
 	int	number;
 }				t_chunk;
