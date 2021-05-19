@@ -1,4 +1,4 @@
-_BOLDMAGENTA	=	\033[1;94m
+BOLDMAGENTA	=	\033[1;94m
 _RESET			=	\033[0m
 
 all:

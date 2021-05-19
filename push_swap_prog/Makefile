@@ -1,5 +1,6 @@
 NAME		=	../push_swap
 CC			=	clang
+#CFLAGS		=	-Wall -Wextra -Werror -fsanitize=address -g
 CFLAGS		=	-Wall -Wextra -Werror
 RM			=	rm -rf
 
