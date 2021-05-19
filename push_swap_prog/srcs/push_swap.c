@@ -6,7 +6,7 @@
 /*   By: mlarboul <mlarboul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/13 12:56:09 by mlarboul          #+#    #+#             */
-/*   Updated: 2021/05/16 13:12:07 by mlarboul         ###   ########.fr       */
+/*   Updated: 2021/05/19 07:49:40 by mlarboul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,7 +74,6 @@ int	main(int argc, char **argv)
 	stack_init.max_size = argc - 1;
 	if (check_args(argv, &stack_init, &stack_a, &stack_b) < 0)
 		return (0);
-
 	if (list_is_sorted(stack_a) == TRUE && list_is_complete(stack_a))
 		;
 	else if (stack_init.max_size <= 3)
@@ -83,13 +82,12 @@ int	main(int argc, char **argv)
 		sort_five(&stack_a, &stack_b);
 	else
 		sort_hundred(&stack_a, &stack_b, &stack_init);
-	print_stacks(stack_a, stack_b);
+//	print_stacks(stack_a, stack_b);
 //	printf("%d\n", ope_nb);
 //	if (list_is_sorted(stack_a) == TRUE && list_is_complete(stack_a))
 //		printf("OK\n");
 //	else
 //		printf("KO\n");
-//	create_chunks(&stack_init, 12);
 	ft_free_stacks(stack_a, stack_b, stack_init);
 	return (0);
 }
