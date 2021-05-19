@@ -6,7 +6,7 @@
 /*   By: mlarboul <mlarboul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/15 08:40:29 by mlarboul          #+#    #+#             */
-/*   Updated: 2021/05/16 10:22:38 by mlarboul         ###   ########.fr       */
+/*   Updated: 2021/05/19 13:34:18 by mlarboul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,6 +57,11 @@ int		exec_operation(t_stack *stack_a, t_stack *stack_b, char *ope);
 int		get_min_max_med(t_stack *stack_init);
 int		bubble_sort(t_stack *stack_init);
 int		stack_cpy(t_stack *src, t_stack *dst);
+
+int		get_value_pos_top(int min, int max, t_stack *stack);
+int		get_value_pos_bot(int min, int max, t_stack *stack);
+int		get_value2_pos_top(int val1, int val2, t_stack *stack);
+int		get_value2_pos_bot(int val1, int val2, t_stack *stack);
 
 int		sort_three(t_stack *stack_a);
 int		sort_five(t_stack *stack_a, t_stack *stack_b);
