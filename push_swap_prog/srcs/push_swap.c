@@ -6,7 +6,7 @@
 /*   By: mlarboul <mlarboul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/13 12:56:09 by mlarboul          #+#    #+#             */
-/*   Updated: 2021/05/20 12:52:27 by mlarboul         ###   ########.fr       */
+/*   Updated: 2021/05/20 13:16:45 by mlarboul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,9 +82,9 @@ int	main(int argc, char **argv)
 	else if (stack_init.max_size <= 5)
 		sort_five(&stack_a, &stack_b);
 	else if (stack_init.max_size <= 100)
-		qs_hundred(&stack_a, &stack_b, &stack_init, 25);
+		qs_hundred(&stack_a, &stack_b, &stack_init, 30);
 	else
-		qs_hundred(&stack_a, &stack_b, &stack_init, 90);
+		qs_hundred(&stack_a, &stack_b, &stack_init, 80);
 	ft_free_stacks(stack_a, stack_b, stack_init);
 	return (0);
 }
