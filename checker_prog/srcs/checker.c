@@ -1,42 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   checker.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mlarboul <mlarboul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/13 08:53:39 by mlarboul          #+#    #+#             */
-/*   Updated: 2021/05/13 09:02:52 by mlarboul         ###   ########.fr       */
+/*   Updated: 2021/05/20 09:34:22 by mlarboul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/checker.h"
 
-/*
-**DEBUG
-**void	print_stacks(t_stack stack_a, t_stack stack_b)
-**{
-**	printf("STACK_A :\n");
-**	if (stack_a.cur_size == 0)
-**		printf("[EMPTY]\n");
-**	for (int i = 0; i < stack_a.cur_size; i++)
-**		printf("[%3d]: %3d\n", i, stack_a.tab[i]);
-**	printf("\nSTACK_B :\n");
-**	if (stack_b.cur_size == 0)
-**		printf("[EMPTY]\n");
-**	for (int i = 0; i < stack_b.cur_size; i++)
-**		printf("[%3d]: %3d\n", i, stack_b.tab[i]);
-**}
-**
-**DEBUG
-**void	print_list(int list_size, int *list)
-**{
-**	for (int i = 0; i < list_size; i++)
-**		printf("value %3d : %3d\n", i, list[i]);
-**}
-*/
-
-int		ft_error(int *list)
+int	ft_error(int *list)
 {
 	write(1, "Error\n", 6);
 	if (list != NULL)
@@ -44,7 +20,7 @@ int		ft_error(int *list)
 	return (0);
 }
 
-int		read_operations(t_stack *stack_a, t_stack *stack_b)
+int	read_operations(t_stack *stack_a, t_stack *stack_b)
 {
 	int		success;
 	char	*line;
@@ -71,7 +47,7 @@ int		read_operations(t_stack *stack_a, t_stack *stack_b)
 	return (0);
 }
 
-int		main(int argc, char **argv)
+int	main(int argc, char **argv)
 {
 	int		*list;
 	int		list_size;
