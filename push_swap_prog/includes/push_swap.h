@@ -6,7 +6,7 @@
 /*   By: mlarboul <mlarboul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/15 08:40:29 by mlarboul          #+#    #+#             */
-/*   Updated: 2021/05/19 15:03:10 by mlarboul         ###   ########.fr       */
+/*   Updated: 2021/05/20 07:25:04 by mlarboul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ extern int ope_nb;
 # define TRUE 1
 # define FALSE 0
 
-void	print_stacks(t_stack stack_a, t_stack stack_b);
+void	print_stacks(t_stack stack_a, t_stack stack_b, char *str);
 
 
 
@@ -66,7 +66,7 @@ int		get_value2_pos_bot(int val1, int val2, t_stack *stack);
 int		sort_three(t_stack *stack_a);
 int		sort_five(t_stack *stack_a, t_stack *stack_b);
 int		sort_hundred(t_stack *stack_a, t_stack *stack_b, t_stack *stack_init);
-int		qs_hundred(t_stack *stack_a, t_stack *stack_b, t_stack *stack_init);
+int		qs_hundred(t_stack *stack_a, t_stack *stack_b, t_stack *stack_init, int chunk_size);
 
 t_chunk	*create_chunks(t_stack *stack_init, int chunk_size);
 
