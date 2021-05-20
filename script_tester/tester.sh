@@ -95,6 +95,7 @@ for ((stack_size = $startRange; stack_size <= $endRange; stack_size++)); do
 		printf "${GREEN}$RESULT_CHECKER ${NOCOLOR}"
 	fi
 	MOVES=` cat push_swap_result.txt | wc -l`
+#	printf "list : $ARG"
 	if (( $stack_size <= 3 )) ; then
 		if (( $MOVES < 3 )); then
 			COLOR=${WHITE}
