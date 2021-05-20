@@ -6,15 +6,15 @@
 /*   By: mlarboul <mlarboul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/10 18:36:26 by mlarboul          #+#    #+#             */
-/*   Updated: 2020/11/16 14:39:58 by mlarboul         ###   ########.fr       */
+/*   Updated: 2021/05/20 08:47:44 by mlarboul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int		ft_isset(char const *set, char c)
+static int	ft_isset(char const *set, char c)
 {
-	unsigned int i;
+	unsigned int	i;
 
 	i = 0;
 	while (set[i])
@@ -40,7 +40,7 @@ static size_t	ft_count_set(char const *s1, char const *set)
 	return (set_nb);
 }
 
-char			*ft_strtrim(char const *s1, char const *set)
+char	*ft_strtrim(char const *s1, char const *set)
 {
 	char			*newstr;
 	unsigned int	i;

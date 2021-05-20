@@ -6,7 +6,7 @@
 /*   By: mlarboul <mlarboul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/10 18:35:34 by mlarboul          #+#    #+#             */
-/*   Updated: 2020/11/16 14:38:11 by mlarboul         ###   ########.fr       */
+/*   Updated: 2021/05/20 08:45:03 by mlarboul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ static void	ft_putdigit(char digit, int fd)
 	write(fd, &digit, 1);
 }
 
-void		ft_putnbr_fd(int n, int fd)
+void	ft_putnbr_fd(int n, int fd)
 {
 	if (n == -2147483648)
 	{

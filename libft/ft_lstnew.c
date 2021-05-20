@@ -6,7 +6,7 @@
 /*   By: mlarboul <mlarboul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/10 18:35:01 by mlarboul          #+#    #+#             */
-/*   Updated: 2020/11/10 18:35:02 by mlarboul         ###   ########.fr       */
+/*   Updated: 2021/05/20 08:44:17 by mlarboul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,8 @@ t_list	*ft_lstnew(void *content)
 {
 	t_list	*elem;
 
-	if (!(elem = malloc(sizeof(t_list))))
+	elem = malloc(sizeof(t_list));
+	if (elem == NULL)
 		return (0);
 	elem->content = content;
 	elem->next = 0;

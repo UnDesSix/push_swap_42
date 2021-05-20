@@ -6,21 +6,21 @@
 /*   By: mlarboul <mlarboul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/10 18:28:48 by mlarboul          #+#    #+#             */
-/*   Updated: 2020/11/17 11:16:24 by mlarboul         ###   ########.fr       */
+/*   Updated: 2021/05/20 08:42:22 by mlarboul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int		ft_is_space(char c)
+static int	ft_is_space(char c)
 {
 	if (c == '\t' || c == '\n' || c == '\v'
-						|| c == '\f' || c == '\r' || c == ' ')
+		|| c == '\f' || c == '\r' || c == ' ')
 		return (1);
 	return (0);
 }
 
-int				ft_atoi(const char *str)
+int	ft_atoi(const char *str)
 {
 	int		i;
 	int		sign;

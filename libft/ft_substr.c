@@ -6,7 +6,7 @@
 /*   By: mlarboul <mlarboul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/10 18:36:29 by mlarboul          #+#    #+#             */
-/*   Updated: 2020/11/16 14:40:45 by mlarboul         ###   ########.fr       */
+/*   Updated: 2021/05/20 08:48:03 by mlarboul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ static char	*ft_strndup1(const char *s1, size_t n)
 	return (s2);
 }
 
-char		*ft_substr(char const *s, unsigned int start, size_t len)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	size_t	i;
 

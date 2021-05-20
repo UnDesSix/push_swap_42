@@ -6,13 +6,13 @@
 /*   By: mlarboul <mlarboul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/10 18:35:41 by mlarboul          #+#    #+#             */
-/*   Updated: 2020/11/16 14:39:06 by mlarboul         ###   ########.fr       */
+/*   Updated: 2021/05/20 08:45:50 by mlarboul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static char		*ft_strdup_spe(char const *s, char c)
+static char	*ft_strdup_spe(char const *s, char c)
 {
 	int		i;
 	char	*dst;
@@ -35,8 +35,8 @@ static char		*ft_strdup_spe(char const *s, char c)
 
 static size_t	ft_count_words(char const *s, char c)
 {
-	size_t count;
-	size_t i;
+	size_t	count;
+	size_t	i;
 
 	count = 0;
 	i = 0;
@@ -54,7 +54,7 @@ static size_t	ft_count_words(char const *s, char c)
 	return (count);
 }
 
-char			**ft_split(char const *s, char c)
+char	**ft_split(char const *s, char c)
 {
 	char	**tab;
 	size_t	words_nb;

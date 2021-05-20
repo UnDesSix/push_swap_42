@@ -6,7 +6,7 @@
 /*   By: mlarboul <mlarboul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/10 18:34:21 by mlarboul          #+#    #+#             */
-/*   Updated: 2020/11/16 14:37:17 by mlarboul         ###   ########.fr       */
+/*   Updated: 2021/05/20 08:43:26 by mlarboul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 static size_t	ft_intlen(long n)
 {
-	size_t len;
+	size_t	len;
 
 	len = 1;
 	if (n < 0)
@@ -30,7 +30,7 @@ static size_t	ft_intlen(long n)
 	return (len);
 }
 
-char			*ft_itoa(int n)
+char	*ft_itoa(int n)
 {
 	size_t	i;
 	size_t	len;
