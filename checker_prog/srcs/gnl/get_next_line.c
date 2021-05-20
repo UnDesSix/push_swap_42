@@ -6,25 +6,26 @@
 /*   By: mlarboul <mlarboul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/12 18:30:09 by mlarboul          #+#    #+#             */
-/*   Updated: 2021/05/20 09:29:52 by mlarboul         ###   ########.fr       */
+/*   Updated: 2021/05/20 11:04:39 by mlarboul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/get_next_line.h"
 
-int	get_next_line_part2(int fd, char **line, t_lista *elm, t_lista *begin_list)
+int	get_next_line_part2(int fd, char **line, t_lista **elm,
+		t_lista **begin_list)
 {
 	if (fd < 0 || !line || !BUFFER_SIZE || read(fd, NULL, 0) < 0)
 		return (-1);
-	if (!begin_list)
+	if (!(*begin_list))
 	{
-		begin_list = ft_create_elmem(fd);
-		if (!begin_list)
+		*begin_list = ft_create_elmem(fd);
+		if (!(*begin_list))
 			return (-1);
 	}
-	elm = begin_list;
-	while (elm && elm->fd != fd)
-		elm = elm->next;
+	*elm = *begin_list;
+	while (*elm && (*elm)->fd != fd)
+		*elm = (*elm)->next;
 	return (0);
 }
 
@@ -35,7 +36,7 @@ int	get_next_line(int fd, char **line)
 	int				return_val;
 
 	elm = NULL;
-	if (get_next_line_part2(fd, line, elm, begin_list) == -1)
+	if (get_next_line_part2(fd, line, &elm, &begin_list) == -1)
 		return (-1);
 	if (!elm)
 	{
@@ -83,7 +84,7 @@ int	ft_read_fd(t_lista *elm, char **line)
 		if (!(elm->buffer))
 			return (-1);
 		elm->buffer = ft_strncpy(elm->buffer, buffer, read_bytes);
-		ft_read_fd_while(elm, line, &return_val, read_bytes);
+		while_cont(elm, line, &return_val, read_bytes);
 	}
 	return (return_val);
 }
