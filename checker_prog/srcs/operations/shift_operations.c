@@ -6,7 +6,7 @@
 /*   By: mlarboul <mlarboul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/12 09:01:00 by mlarboul          #+#    #+#             */
-/*   Updated: 2021/05/13 08:56:45 by mlarboul         ###   ########.fr       */
+/*   Updated: 2021/05/20 09:33:38 by mlarboul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 **	Otherwise it operate the rotate and returns 0.
 */
 
-int		single_rotate(t_stack *stack)
+int	single_rotate(t_stack *stack)
 {
 	int	i;
 	int	tmp_value;
@@ -44,7 +44,7 @@ int		single_rotate(t_stack *stack)
 **	Otherwise it operate the rotate and returns 0.
 */
 
-int		single_reverse(t_stack *stack)
+int	single_reverse(t_stack *stack)
 {
 	int	i;
 	int	tmp_value;
@@ -68,7 +68,7 @@ int		single_reverse(t_stack *stack)
 **	This function will do "rr".
 */
 
-int		double_rotate(t_stack *stack_a, t_stack *stack_b)
+int	double_rotate(t_stack *stack_a, t_stack *stack_b)
 {
 	if (single_rotate(stack_a) < 0)
 		return (-1);
@@ -81,7 +81,7 @@ int		double_rotate(t_stack *stack_a, t_stack *stack_b)
 **	This function will do "rrr".
 */
 
-int		double_reverse(t_stack *stack_a, t_stack *stack_b)
+int	double_reverse(t_stack *stack_a, t_stack *stack_b)
 {
 	if (single_reverse(stack_a) < 0)
 		return (-1);

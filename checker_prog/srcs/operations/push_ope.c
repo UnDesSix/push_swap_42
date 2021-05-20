@@ -6,7 +6,7 @@
 /*   By: mlarboul <mlarboul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/12 08:55:44 by mlarboul          #+#    #+#             */
-/*   Updated: 2021/05/13 09:04:32 by mlarboul         ###   ########.fr       */
+/*   Updated: 2021/05/20 09:33:13 by mlarboul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 **	Otherwise it operate the push and return 0.
 */
 
-int		push_ope(t_stack *src, t_stack *dst)
+int	push_ope(t_stack *src, t_stack *dst)
 {
 	int	i;
 
