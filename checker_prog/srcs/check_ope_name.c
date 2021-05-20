@@ -25,7 +25,7 @@ t_bool	operation_is_valid(char *ope)
 			|| !ft_strncmp(ope, "pb", 2)
 			|| !ft_strncmp(ope, "ra", 2)
 			|| !ft_strncmp(ope, "rb", 2)
-			|| !ft_strncmp(ope, "ra", 2)))
+			|| !ft_strncmp(ope, "rr", 2)))
 		return (TRUE);
 	else if (ft_strlen(ope) == 3 && (!ft_strncmp(ope, "rra", 3)
 			|| !ft_strncmp(ope, "rrb", 3)
