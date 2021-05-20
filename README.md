@@ -25,8 +25,8 @@ instruction will be followed by ’\n’. Once all the instructions have been re
 checker will execute them on the stack received as an argument.
 
 
-*THE PART BELOW IS NOT THE RESULT OF MY WORK*\n
-*It comes from tharchen's github*\n
+*THE PART BELOW IS NOT THE RESULT OF MY WORK\n*
+*It comes from tharchen's github\n*
 # A tester for Push_swap@42 - To see what's going on
 This tester shows the performance of your push_swap program.
 
