@@ -6,7 +6,7 @@
 /*   By: mlarboul <mlarboul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/19 07:04:08 by mlarboul          #+#    #+#             */
-/*   Updated: 2021/05/20 09:56:53 by mlarboul         ###   ########.fr       */
+/*   Updated: 2021/05/20 12:47:09 by mlarboul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,7 +82,6 @@ int	qs_hundred(t_stack *stack_a, t_stack *stack_b,
 	i = 0;
 	while (i < chunks[0].number)
 	{
-		find_and_pb_med(stack_a, stack_b, chunks[i].med_val);
 		pb_before_and_after_med(stack_a, stack_b, chunks[i]);
 		quick_order_stack_a(stack_a, chunks, i);
 		push_back_on_a(stack_a, stack_b);
