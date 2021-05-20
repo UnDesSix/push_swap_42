@@ -6,7 +6,7 @@
 /*   By: mlarboul <mlarboul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/13 12:56:09 by mlarboul          #+#    #+#             */
-/*   Updated: 2021/05/20 07:44:36 by mlarboul         ###   ########.fr       */
+/*   Updated: 2021/05/20 08:16:52 by mlarboul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,12 +85,6 @@ int	main(int argc, char **argv)
 		qs_hundred(&stack_a, &stack_b, &stack_init, 25);
 	else
 		qs_hundred(&stack_a, &stack_b, &stack_init, 90);
-//	print_stacks(stack_a, stack_b);
-//	printf("%d\n", ope_nb);
-//	if (list_is_sorted(stack_a) == TRUE && list_is_complete(stack_a))
-//		printf("OK\n");
-//	else
-//		printf("KO\n");
 	ft_free_stacks(stack_a, stack_b, stack_init);
 	return (0);
 }
