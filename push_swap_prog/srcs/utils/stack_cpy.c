@@ -6,7 +6,7 @@
 /*   By: mlarboul <mlarboul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/15 10:34:13 by mlarboul          #+#    #+#             */
-/*   Updated: 2021/05/15 11:58:12 by mlarboul         ###   ########.fr       */
+/*   Updated: 2021/05/20 10:04:46 by mlarboul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	stack_cpy(t_stack *src, t_stack *dst)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	if (dst == NULL || src->tab == NULL || src->cur_size == 0)

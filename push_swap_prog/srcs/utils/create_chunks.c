@@ -6,7 +6,7 @@
 /*   By: mlarboul <mlarboul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/16 07:41:33 by mlarboul          #+#    #+#             */
-/*   Updated: 2021/05/19 07:41:21 by mlarboul         ###   ########.fr       */
+/*   Updated: 2021/05/20 10:06:22 by mlarboul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ t_chunk	*get_chunks_nb(int list_size, int chunk_size)
 	return (chunks);
 }
 
-t_chunk *create_chunks(t_stack *stack_init, int chunk_size)
+t_chunk	*create_chunks(t_stack *stack_init, int chunk_size)
 {
 	t_chunk	*chunks;
 	int		i;
@@ -52,9 +52,10 @@ t_chunk *create_chunks(t_stack *stack_init, int chunk_size)
 	while (i < chunks[0].number)
 	{
 		chunks[i].min_val = stack_init->tab[i * chunk_size];
-		chunks[i].max_val = stack_init->tab[i * chunk_size + chunks[i].size - 1];
-		chunks[i].med_val = stack_init->tab
-								[i * chunk_size + (chunks[i].size / 2)];
+		chunks[i].max_val
+			= stack_init->tab[i * chunk_size + chunks[i].size - 1];
+		chunks[i].med_val
+			= stack_init->tab[i * chunk_size + (chunks[i].size / 2)];
 		i++;
 	}
 	return (chunks);

@@ -6,29 +6,29 @@
 /*   By: mlarboul <mlarboul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/13 12:56:09 by mlarboul          #+#    #+#             */
-/*   Updated: 2021/05/20 08:16:52 by mlarboul         ###   ########.fr       */
+/*   Updated: 2021/05/20 10:11:13 by mlarboul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-int		ope_nb = 0;
-
-void	print_stacks(t_stack stack_a, t_stack stack_b, char *str)
-{
-	printf("\n---------------- ");
-	printf("(%s)\n\n", str);
-	printf("STACK_A :\n");
-	if (stack_a.cur_size == 0)
-		printf("[EMPTY]\n");
-	for (int i = 0; i < stack_a.cur_size; i++)
-		printf("[%3d]: %3d\n", i, stack_a.tab[i]);
-	printf("\nSTACK_B :\n");
-	if (stack_b.cur_size == 0)
-		printf("[EMPTY]\n");
-	for (int i = 0; i < stack_b.cur_size; i++)
-		printf("[%3d]: %3d\n", i, stack_b.tab[i]);
-}
+/*
+//	void	print_stacks(t_stack stack_a, t_stack stack_b, char *str)
+//	{
+//		printf("\n---------------- ");
+//		printf("(%s)\n\n", str);
+//		printf("STACK_A :\n");
+//		if (stack_a.cur_size == 0)
+//			printf("[EMPTY]\n");
+//		for (int i = 0; i < stack_a.cur_size; i++)
+//			printf("[%3d]: %3d\n", i, stack_a.tab[i]);
+//		printf("\nSTACK_B :\n");
+//		if (stack_b.cur_size == 0)
+//			printf("[EMPTY]\n");
+//		for (int i = 0; i < stack_b.cur_size; i++)
+//			printf("[%3d]: %3d\n", i, stack_b.tab[i]);
+//	}
+*/
 
 int	ft_free_stacks(t_stack stack_a, t_stack stack_b, t_stack stack_init)
 {
@@ -61,14 +61,14 @@ int	check_args(char **argv, t_stack *stack_init,
 	if (!stack_init->tab || unique_values(stack_init->tab, list_size) == FALSE)
 		return (ft_error(stack_init->tab));
 	if (create_stack_a(stack_a, stack_init->tab, list_size) < 0
-			|| create_stack_b(stack_b, list_size) < 0)
+		|| create_stack_b(stack_b, list_size) < 0)
 		return (ft_error(stack_init->tab));
 	return (0);
 }
 
 int	main(int argc, char **argv)
 {
-	t_stack stack_init;
+	t_stack	stack_init;
 	t_stack	stack_a;
 	t_stack	stack_b;
 

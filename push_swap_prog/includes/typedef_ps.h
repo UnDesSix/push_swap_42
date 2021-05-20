@@ -6,23 +6,23 @@
 /*   By: mlarboul <mlarboul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/16 10:18:26 by mlarboul          #+#    #+#             */
-/*   Updated: 2021/05/19 07:06:23 by mlarboul         ###   ########.fr       */
+/*   Updated: 2021/05/20 09:41:15 by mlarboul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef TYPEDEF_PS_H
 # define TYPEDEF_PS_H
 
-typedef int		t_bool;
+typedef int	t_bool;
 
-typedef struct	s_info
+typedef struct s_info
 {
 	int	min;
-	int max;
-	int med;
+	int	max;
+	int	med;
 }				t_info;
 
-typedef struct	s_stack
+typedef struct s_stack
 {
 	int		*tab;
 	int		cur_size;
@@ -30,12 +30,12 @@ typedef struct	s_stack
 	t_info	info;
 }				t_stack;
 
-typedef struct	s_chunk
+typedef struct s_chunk
 {
 	int	min_val;
-	int max_val;
-	int med_val;
-	int size;
+	int	max_val;
+	int	med_val;
+	int	size;
 	int	number;
 }				t_chunk;
 

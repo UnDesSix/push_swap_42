@@ -6,13 +6,13 @@
 /*   By: mlarboul <mlarboul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/12 09:01:00 by mlarboul          #+#    #+#             */
-/*   Updated: 2021/05/16 12:52:18 by mlarboul         ###   ########.fr       */
+/*   Updated: 2021/05/20 09:43:30 by mlarboul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/push_swap.h"
 
-int		ft_ra(t_stack *stack)
+int	ft_ra(t_stack *stack)
 {
 	int	i;
 	int	tmp_value;
@@ -29,13 +29,11 @@ int		ft_ra(t_stack *stack)
 		i++;
 	}
 	stack->tab[i] = tmp_value;
-//	write(1, "ra\n", 3);
-	printf("ra\n");
-	ope_nb++;
+	write(1, "ra\n", 3);
 	return (0);
 }
 
-int		ft_rb(t_stack *stack)
+int	ft_rb(t_stack *stack)
 {
 	int	i;
 	int	tmp_value;
@@ -52,20 +50,16 @@ int		ft_rb(t_stack *stack)
 		i++;
 	}
 	stack->tab[i] = tmp_value;
-//	write(1, "rb\n", 3);
-	printf("rb\n");
-	ope_nb++;
+	write(1, "rb\n", 3);
 	return (0);
 }
 
-int		ft_rr(t_stack *stack_a, t_stack *stack_b)
+int	ft_rr(t_stack *stack_a, t_stack *stack_b)
 {
 	if (ft_ra(stack_a) < 0)
 		return (-1);
 	if (ft_rb(stack_b) < 0)
 		return (-1);
-//	write(1, "rr\n", 3);
-	printf("rr\n");
-	ope_nb++;
+	write(1, "rr\n", 3);
 	return (0);
 }

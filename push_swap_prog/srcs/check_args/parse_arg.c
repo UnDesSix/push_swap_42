@@ -6,13 +6,13 @@
 /*   By: mlarboul <mlarboul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/06 16:43:12 by mlarboul          #+#    #+#             */
-/*   Updated: 2021/05/13 15:34:13 by mlarboul         ###   ########.fr       */
+/*   Updated: 2021/05/20 09:41:54 by mlarboul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/push_swap.h"
 
-int		free_tmp_list(char **tmp_list, int err_code)
+int	free_tmp_list(char **tmp_list, int err_code)
 {
 	int	i;
 
@@ -29,7 +29,7 @@ int		free_tmp_list(char **tmp_list, int err_code)
 **	is the adress of the tab containing all arguments.
 */
 
-int		*parse_arg(int list_size, char **argv)
+int	*parse_arg(int list_size, char **argv)
 {
 	int	i;
 	int	*list;

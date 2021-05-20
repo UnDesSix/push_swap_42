@@ -6,13 +6,13 @@
 /*   By: mlarboul <mlarboul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/13 08:55:40 by mlarboul          #+#    #+#             */
-/*   Updated: 2021/05/15 10:24:28 by mlarboul         ###   ########.fr       */
+/*   Updated: 2021/05/20 09:42:06 by mlarboul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/push_swap.h"
 
-int		create_stack_b(t_stack *stack_b, int list_size)
+int	create_stack_b(t_stack *stack_b, int list_size)
 {
 	stack_b->tab = malloc(sizeof(int) * list_size);
 	if (stack_b->tab == NULL)
@@ -22,9 +22,9 @@ int		create_stack_b(t_stack *stack_b, int list_size)
 	return (0);
 }
 
-int		create_stack_a(t_stack *stack_a, int *list, int list_size)
+int	create_stack_a(t_stack *stack_a, int *list, int list_size)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	stack_a->tab = malloc(sizeof(int) * list_size);

@@ -6,17 +6,12 @@
 /*   By: mlarboul <mlarboul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/15 08:40:29 by mlarboul          #+#    #+#             */
-/*   Updated: 2021/05/20 07:25:04 by mlarboul         ###   ########.fr       */
+/*   Updated: 2021/05/20 09:52:59 by mlarboul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
-
-
-
-# include <stdio.h>
-extern int ope_nb;
 
 # include <stdlib.h>
 # include <unistd.h>
@@ -24,11 +19,6 @@ extern int ope_nb;
 # include "./typedef_ps.h"
 # define TRUE 1
 # define FALSE 0
-
-void	print_stacks(t_stack stack_a, t_stack stack_b, char *str);
-
-
-
 
 int		ft_atoi_spe(const char *str, int *result);
 int		*parse_arg(int list_size, char **argv);
@@ -65,8 +55,10 @@ int		get_value2_pos_bot(int val1, int val2, t_stack *stack);
 
 int		sort_three(t_stack *stack_a);
 int		sort_five(t_stack *stack_a, t_stack *stack_b);
-int		sort_hundred(t_stack *stack_a, t_stack *stack_b, t_stack *stack_init);
-int		qs_hundred(t_stack *stack_a, t_stack *stack_b, t_stack *stack_init, int chunk_size);
+
+int		push_back_on_a(t_stack *stack_a, t_stack *stack_b);
+int		qs_hundred(t_stack *stack_a, t_stack *stack_b,
+			t_stack *stack_init, int chunk_size);
 
 t_chunk	*create_chunks(t_stack *stack_init, int chunk_size);
 
