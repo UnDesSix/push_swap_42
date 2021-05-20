@@ -1,6 +1,5 @@
 NAME		=	../push_swap
 CC			=	clang
-#CFLAGS		=	-Wall -Wextra -Werror -fsanitize=address -g
 CFLAGS		=	-Wall -Wextra -Werror
 RM			=	rm -rf
 
@@ -34,7 +33,10 @@ all				:	init $(NAME)
 init			:
 					@ mkdir -p $(OBJ_DIR)
 
-$(NAME)			:	$(OBJ) $(INC)
+libft			:
+					@ (cd ./../libft; make --no-print-directory all)
+
+$(NAME)			:	libft $(OBJ) $(INC)
 					@ echo "$(_INFO) Initialize $(NAME)"
 				 	@ $(CC) $(CFLAGS) -o $(NAME) $(OBJ) $(LIB_FLAG)
 
@@ -53,4 +55,4 @@ fclean			:	clean
 
 re				: 	fclean all
 
-.PHONY: 		all fclean clean re
+.PHONY: 		all fclean clean re init libft

@@ -33,7 +33,10 @@ all				:	init $(NAME)
 init			:
 					@ mkdir -p $(OBJ_DIR)
 
-$(NAME)			:	$(OBJ) $(INC)
+libft			:
+					@ (cd ./../libft; make --no-print-directory all)
+
+$(NAME)			:	libft $(OBJ) $(INC)
 					@ echo "$(_INFO) Initialize $(NAME)"
 				 	@ $(CC) $(CFLAGS) -o $(NAME) $(OBJ) $(LIB_FLAG)
 
@@ -46,9 +49,11 @@ clean			:
 					@ echo "$(_INFO) Deleted object files and directories"
 					@ $(RM) $(OBJ_DIR)
 					@ echo "$(_SUCCESS) Working directory clean"
+					@ (cd ./../libft; make --no-print-directory clean)
 
 fclean			:	clean
 					@ $(RM) $(NAME)
+					@ (cd ./../libft; make --no-print-directory fclean)
 
 re				: 	fclean all
 
