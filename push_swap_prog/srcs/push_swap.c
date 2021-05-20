@@ -6,7 +6,7 @@
 /*   By: mlarboul <mlarboul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/13 12:56:09 by mlarboul          #+#    #+#             */
-/*   Updated: 2021/05/19 14:43:12 by mlarboul         ###   ########.fr       */
+/*   Updated: 2021/05/20 07:44:36 by mlarboul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,10 @@
 
 int		ope_nb = 0;
 
-void	print_stacks(t_stack stack_a, t_stack stack_b)
+void	print_stacks(t_stack stack_a, t_stack stack_b, char *str)
 {
-	printf("\n----------------\n\n");
+	printf("\n---------------- ");
+	printf("(%s)\n\n", str);
 	printf("STACK_A :\n");
 	if (stack_a.cur_size == 0)
 		printf("[EMPTY]\n");
@@ -80,8 +81,10 @@ int	main(int argc, char **argv)
 		sort_three(&stack_a);
 	else if (stack_init.max_size <= 5)
 		sort_five(&stack_a, &stack_b);
+	else if (stack_init.max_size <= 100)
+		qs_hundred(&stack_a, &stack_b, &stack_init, 25);
 	else
-		qs_hundred(&stack_a, &stack_b, &stack_init);
+		qs_hundred(&stack_a, &stack_b, &stack_init, 90);
 //	print_stacks(stack_a, stack_b);
 //	printf("%d\n", ope_nb);
 //	if (list_is_sorted(stack_a) == TRUE && list_is_complete(stack_a))
