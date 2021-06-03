@@ -1,4 +1,10 @@
-# Makefile
+# Push_Swap
+
+### Description
+This project involves sorting data on a stack, with a limited set of instructions, and the smallest number of moves. To make this happen, I had to manipulate various sorting algorithms and choose the most appropriate solution(s) for optimized data sorting. 
+
+***
+### Makefile
 Makefile a the root allowed you to compile the libft, the chercker and the push_swap.
 
 So you can run:
@@ -12,22 +18,23 @@ Or simply:
 make
 ```
 
-## What's push_swap?
+### What's push_swap?
 This project involves sorting data on a stack, with a limited set of instructions,
 and the smallest number of moves. To make this happen, you will have to manipulate
 various sorting algorithms and choose the most appropriate solution(s) for
 optimized data sorting.
 
-## What's checker?
+### What's checker?
 The checker will get as an argument the stack a formatted as a list of integers.
 The checker will then wait and read instructions on the standard input, each
 instruction will be followed by ’\n’. Once all the instructions have been read
 checker will execute them on the stack received as an argument.
 
 
+:warning: :warning: :warning: :warning: 
 *THE PART BELOW IS NOT THE RESULT OF MY WORK*
-
-*It comes from tharchen's github*
+*It comes from [tharchen's github](https://github.com/solaldunckel)*
+:warning: :warning: :warning: :warning: 
 # A tester for Push_swap@42 - To see what's going on
 This tester shows the performance of your push_swap program.
 
@@ -43,7 +50,7 @@ This tester shows the performance of your push_swap program.
 ```bash
 bash push_swap_tester/tester.sh [path-to-push-swap-dir] [stack-size 0R range] [nb_of_tests]
 ```
-### for example:
+#### for example:
 the following command will perform 100 testss with a stack of 100 integers
 ```bash
 bash push_swap_tester/tester.sh ../push_swap 100 100
