@@ -34,6 +34,8 @@ checker will execute them on the stack received as an argument.
 :warning: :warning: :warning: :warning: 
 *THE PART BELOW IS NOT THE RESULT OF MY WORK*
 *It comes from [tharchen's github](https://github.com/solaldunckel)*
+*I did make some changes, especially the adding the min and max values*
+
 :warning: :warning: :warning: :warning: 
 # A tester for Push_swap@42 - To see what's going on
 This tester shows the performance of your push_swap program.
